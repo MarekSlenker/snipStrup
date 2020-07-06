@@ -1,4 +1,4 @@
-# # snipStrup
+# snipStrup
 ### SNPs STRUCTURE Parser  
 **Suitable for mixed polyploid data sets!**
 &nbsp;  
