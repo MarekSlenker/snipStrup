@@ -4,7 +4,7 @@
 &nbsp;  
 &nbsp;  
 
-The **snipStrup** is currently under development. Meanwhile, we make available shell and R scripts for calling SNPs, parsing vcf files to toSTRUCTURE files, combining them and producing STRUCTURE output files, as done in [Melichárková et al. 2020](https://www.ncbi.nlm.nih.gov/pubmed/______). 
+The **snipStrup** is currently under development. Meanwhile, we made available shell and R scripts for calling SNPs, parsing vcf files to toSTRUCTURE files, combining them and producing STRUCTURE output files, as done in [Melichárková et al. 2020](https://www.ncbi.nlm.nih.gov/pubmed/______). 
 
 
 ### Software Dependencies
