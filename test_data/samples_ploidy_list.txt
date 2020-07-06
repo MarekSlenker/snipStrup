@@ -1,0 +1,10 @@
+Cmat_TUL8
+2
+Cprat_HOB5
+2
+Cprat_LOCH1
+4
+Cprat_MOJ2
+6
+Criv_CAP6
+2

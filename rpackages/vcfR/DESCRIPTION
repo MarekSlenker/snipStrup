@@ -1,0 +1,50 @@
+Package: vcfR
+Title: Manipulate and Visualize VCF Data
+Description: Facilitates easy manipulation of variant call format (VCF) data.
+    Functions are provided to rapidly read from and write to VCF files. Once
+    VCF data is read into R a parser function extracts matrices of data. This
+    information can then be used for quality control or other purposes. Additional
+    functions provide visualization of genomic data. Once processing is complete
+    data may be written to a VCF file (*.vcf.gz). It also may be converted into
+    other popular R objects (e.g., genlight, DNAbin). VcfR provides a link between
+    VCF data and familiar R software.
+Version: 1.10.0
+Authors@R: c(
+    person(c("Brian", "J."), "Knaus", role = c("cre", "aut"),
+    email = "briank.lists@gmail.com", comment = c(ORCID = "0000-0003-1665-4343")),
+    person(c("Niklaus", "J."), "Grunwald", role = "aut",
+    email = "grunwaln@science.oregonstate.edu", comment = c(ORCID = "0000-0003-1656-7602")),
+    person(c("Eric", "C."), "Anderson", role = "ctb",
+    email = "eric.anderson@noaa.gov"),
+    person(c("David", "J."), "Winter", role = "ctb",
+    email = "david.winter@gmail.com"),
+    person(c("Zhian", "N."), "Kamvar", role = "ctb",
+    email = "zkamvar@gmail.com", comment = c(ORCID = "0000-0003-1458-7108")),
+    person(c("Javier", "F."), "Tabima", role = "ctb",
+    email = "caifaz01@gmail.com", comment = c(ORCID = "0000-0002-3603-2691"))
+    )
+Maintainer: Brian J. Knaus <briank.lists@gmail.com>
+URL: https://github.com/knausb/vcfR,
+        https://knausb.github.io/vcfR_documentation/
+Depends: R (>= 3.0.1)
+LinkingTo: Rcpp
+Imports: ape, dplyr, graphics, grDevices, magrittr, memuse, methods,
+        pinfsc50, Rcpp, stats, stringr, tibble, utils, vegan,
+        viridisLite
+Suggests: adegenet, ggplot2, knitr, poppr, reshape2, rmarkdown, scales,
+        testthat, tidyr
+VignetteBuilder: knitr
+License: GPL-3
+RoxygenNote: 7.0.2
+Encoding: UTF-8
+NeedsCompilation: yes
+Packaged: 2020-02-05 23:14:05 UTC; knausb
+Author: Brian J. Knaus [cre, aut] (<https://orcid.org/0000-0003-1665-4343>),
+  Niklaus J. Grunwald [aut] (<https://orcid.org/0000-0003-1656-7602>),
+  Eric C. Anderson [ctb],
+  David J. Winter [ctb],
+  Zhian N. Kamvar [ctb] (<https://orcid.org/0000-0003-1458-7108>),
+  Javier F. Tabima [ctb] (<https://orcid.org/0000-0002-3603-2691>)
+Repository: CRAN
+Date/Publication: 2020-02-06 09:50:02 UTC
+Built: R 3.5.1; x86_64-pc-linux-gnu; 2020-04-03 21:24:16 UTC; unix

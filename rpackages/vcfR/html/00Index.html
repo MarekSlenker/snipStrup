@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>R: Manipulate and Visualize VCF Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+<h1> Manipulate and Visualize VCF Data
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]" />
+</h1>
+<hr/>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
+</div><h2>Documentation for package &lsquo;vcfR&rsquo; version 1.10.0</h2>
+
+<ul><li><a href="../DESCRIPTION">DESCRIPTION file</a>.</li>
+<li><a href="../doc/index.html">User guides, package vignettes and other documentation.</a></li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<p style="text-align: center;">
+<a href="#A">A</a>
+<a href="#C">C</a>
+<a href="#D">D</a>
+<a href="#E">E</a>
+<a href="#F">F</a>
+<a href="#G">G</a>
+<a href="#H">H</a>
+<a href="#I">I</a>
+<a href="#L">L</a>
+<a href="#M">M</a>
+<a href="#N">N</a>
+<a href="#O">O</a>
+<a href="#P">P</a>
+<a href="#Q">Q</a>
+<a href="#R">R</a>
+<a href="#S">S</a>
+<a href="#V">V</a>
+<a href="#W">W</a>
+<a href="#Z">Z</a>
+<a href="#misc">misc</a>
+</p>
+
+
+<h2><a name="A">-- A --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="addID.html">addID</a></td>
+<td>Populate the ID column of VCF data</td></tr>
+<tr><td style="width: 25%;"><a href="AD_frequency.html">AD_frequency</a></td>
+<td>AD_frequency</td></tr>
+<tr><td style="width: 25%;"><a href="genotype_matrix.html">alleles2consensus</a></td>
+<td>Genotype matrix functions</td></tr>
+<tr><td style="width: 25%;"><a href="create_chromR.html">ann2chromR</a></td>
+<td>Create chromR object</td></tr>
+</table>
+
+<h2><a name="C">-- C --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="check_keys.html">check_keys</a></td>
+<td>Check that INFO and FORMAT keys are unique</td></tr>
+<tr><td style="width: 25%;"><a href="chromR_example.html">chrom</a></td>
+<td>Example chromR object.</td></tr>
+<tr><td style="width: 25%;"><a href="chromo_plot.html">chromo</a></td>
+<td>Plot chromR object</td></tr>
+<tr><td style="width: 25%;"><a href="chromo_plot.html">chromoqc</a></td>
+<td>Plot chromR object</td></tr>
+<tr><td style="width: 25%;"><a href="chromo_plot.html">chromo_plot</a></td>
+<td>Plot chromR object</td></tr>
+<tr><td style="width: 25%;"><a href="chromR_functions.html">chromR functions</a></td>
+<td>chromR_functions</td></tr>
+<tr><td style="width: 25%;"><a href="chromR-class.html">chromR-class</a></td>
+<td>chromR class</td></tr>
+<tr><td style="width: 25%;"><a href="chromR-method.html">chromR-method</a></td>
+<td>chromR-method</td></tr>
+<tr><td style="width: 25%;"><a href="chrom_to_vcfR.html">chromR2vcfR</a></td>
+<td>Convert chrom objects to vcfR objects</td></tr>
+<tr><td style="width: 25%;"><a href="chromR_example.html">chromR_example</a></td>
+<td>Example chromR object.</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_to_tidy_conversion.html">Convert to tidy data frames</a></td>
+<td>Convert vcfR objects to tidy data frames</td></tr>
+<tr><td style="width: 25%;"><a href="create_chromR.html">create.chromR</a></td>
+<td>Create chromR object</td></tr>
+</table>
+
+<h2><a name="D">-- D --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="vcfR-method.html">dim-method</a></td>
+<td>show</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR-method.html">dim.vcfR</a></td>
+<td>show</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_example.html">dna</a></td>
+<td>Example data for vcfR.</td></tr>
+<tr><td style="width: 25%;"><a href="drplot.html">dr.plot</a></td>
+<td>dr.plot elements</td></tr>
+<tr><td style="width: 25%;"><a href="drplot.html">dr.plot elements</a></td>
+<td>dr.plot elements</td></tr>
+</table>
+
+<h2><a name="E">-- E --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="extract_gt.html">extract.gt</a></td>
+<td>Extract elements from vcfR objects</td></tr>
+<tr><td style="width: 25%;"><a href="extract_gt.html">extract.haps</a></td>
+<td>Extract elements from vcfR objects</td></tr>
+<tr><td style="width: 25%;"><a href="extract_gt.html">extract.indels</a></td>
+<td>Extract elements from vcfR objects</td></tr>
+<tr><td style="width: 25%;"><a href="extract_gt.html">extract.info</a></td>
+<td>Extract elements from vcfR objects</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_to_tidy_conversion.html">extract_gt_tidy</a></td>
+<td>Convert vcfR objects to tidy data frames</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_to_tidy_conversion.html">extract_info_tidy</a></td>
+<td>Convert vcfR objects to tidy data frames</td></tr>
+</table>
+
+<h2><a name="F">-- F --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="vcfR_conversion.html">Format conversion</a></td>
+<td>Convert vcfR objects to other formats</td></tr>
+<tr><td style="width: 25%;"><a href="freq_peak.html">freq_peak</a></td>
+<td>freq_peak</td></tr>
+<tr><td style="width: 25%;"><a href="freq_peak_plot.html">freq_peak_plot</a></td>
+<td>Plot freq_peak object</td></tr>
+</table>
+
+<h2><a name="G">-- G --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="genetic_diff.html">genetic_diff</a></td>
+<td>Genetic differentiation</td></tr>
+<tr><td style="width: 25%;"><a href="genotype_matrix.html">Genotype matrix functions</a></td>
+<td>Genotype matrix functions</td></tr>
+<tr><td style="width: 25%;"><a href="genotype_matrix.html">get.alleles</a></td>
+<td>Genotype matrix functions</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getALT</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getALT-method</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getCHROM</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getCHROM-method</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getFILTER</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getFILTER-method</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getFIX</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getFIX-method</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getID</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getID-method</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getINFO</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getINFO-method</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getPOS</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getPOS-method</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getQUAL</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getQUAL-method</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getREF</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="getFIX.html">getREF-method</a></td>
+<td>Get elements from the fixed region of a VCF file</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_example.html">gff</a></td>
+<td>Example data for vcfR.</td></tr>
+<tr><td style="width: 25%;"><a href="pop_gen_sum.html">gt.to.popsum</a></td>
+<td>Population genetics summaries</td></tr>
+<tr><td style="width: 25%;"><a href="pop_gen_sum.html">gt2popsum</a></td>
+<td>Population genetics summaries</td></tr>
+</table>
+
+<h2><a name="H">-- H --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="vcfR-method.html">head</a></td>
+<td>show</td></tr>
+<tr><td style="width: 25%;"><a href="chromR-method.html">head-method</a></td>
+<td>chromR-method</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR-method.html">head-method</a></td>
+<td>show</td></tr>
+<tr><td style="width: 25%;"><a href="heatmap_bp.html">heatmap.bp</a></td>
+<td>Heatmap with barplots</td></tr>
+</table>
+
+<h2><a name="I">-- I --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="INFO2df.html">INFO2df</a></td>
+<td>Reformat INFO data as a data.frame</td></tr>
+<tr><td style="width: 25%;"><a href="query_gt.html">is.biallelic</a></td>
+<td>Query the gt slot</td></tr>
+<tr><td style="width: 25%;"><a href="is_het.html">is.het</a></td>
+<td>Query genotypes for heterozygotes</td></tr>
+<tr><td style="width: 25%;"><a href="extract_gt.html">is.indel</a></td>
+<td>Extract elements from vcfR objects</td></tr>
+<tr><td style="width: 25%;"><a href="query_gt.html">is.polymorphic</a></td>
+<td>Query the gt slot</td></tr>
+<tr><td style="width: 25%;"><a href="query_gt.html">is_biallelic</a></td>
+<td>Query the gt slot</td></tr>
+<tr><td style="width: 25%;"><a href="is_het.html">is_het</a></td>
+<td>Query genotypes for heterozygotes</td></tr>
+</table>
+
+<h2><a name="L">-- L --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="chromR-method.html">length-method</a></td>
+<td>chromR-method</td></tr>
+</table>
+
+<h2><a name="M">-- M --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="maf.html">maf</a></td>
+<td>Minor allele frequency</td></tr>
+<tr><td style="width: 25%;"><a href="chromR_functions.html">masker</a></td>
+<td>chromR_functions</td></tr>
+<tr><td style="width: 25%;"><a href="masplit.html">masplit</a></td>
+<td>masplit</td></tr>
+<tr><td style="width: 25%;"><a href="INFO2df.html">metaINFO2df</a></td>
+<td>Reformat INFO data as a data.frame</td></tr>
+</table>
+
+<h2><a name="N">-- N --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="chromR-method.html">names&lt;--method</a></td>
+<td>chromR-method</td></tr>
+<tr><td style="width: 25%;"><a href="windowing.html">NM2winNM</a></td>
+<td>Create window summaries of data</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR-method.html">nrow-method</a></td>
+<td>show</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR-method.html">nrow.vcfR</a></td>
+<td>show</td></tr>
+<tr><td style="width: 25%;"><a href="drplot.html">null.plot</a></td>
+<td>dr.plot elements</td></tr>
+</table>
+
+<h2><a name="O">-- O --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="ordisample.html">ordisample</a></td>
+<td>Ordinate a sample's data</td></tr>
+</table>
+
+<h2><a name="P">-- P --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="pairwise_genetic_diff.html">pairwise_genetic_diff</a></td>
+<td>Pairwise genetic differentiation across populations</td></tr>
+<tr><td style="width: 25%;"><a href="peak_to_ploid.html">peak_to_ploid</a></td>
+<td>Convert allele balance peaks to ploidy</td></tr>
+<tr><td style="width: 25%;"><a href="chromR-method.html">plot-method</a></td>
+<td>chromR-method</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR-method.html">plot-method</a></td>
+<td>show</td></tr>
+<tr><td style="width: 25%;"><a href="pop_gen_sum.html">Population genetics summaries</a></td>
+<td>Population genetics summaries</td></tr>
+<tr><td style="width: 25%;"><a href="chromR-method.html">print-method</a></td>
+<td>chromR-method</td></tr>
+<tr><td style="width: 25%;"><a href="proc_chromR.html">proc.chromR</a></td>
+<td>Process chromR object</td></tr>
+<tr><td style="width: 25%;"><a href="proc_chromR.html">Process chromR objects</a></td>
+<td>Process chromR object</td></tr>
+</table>
+
+<h2><a name="Q">-- Q --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="query_gt.html">query.gt</a></td>
+<td>Query the gt slot</td></tr>
+<tr><td style="width: 25%;"><a href="queryMETA.html">queryMETA</a></td>
+<td>Query the META section of VCF data</td></tr>
+</table>
+
+<h2><a name="R">-- R --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="ranking.html">rank.variants.chromR</a></td>
+<td>Ranking variants within windows</td></tr>
+<tr><td style="width: 25%;"><a href="ranking.html">Ranking</a></td>
+<td>Ranking variants within windows</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR-method.html">rbind2-method</a></td>
+<td>show</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR-method.html">rbind2.vcfR</a></td>
+<td>show</td></tr>
+<tr><td style="width: 25%;"><a href="io_vcfR.html">read.vcfR</a></td>
+<td>Read and write vcf format files</td></tr>
+<tr><td style="width: 25%;"><a href="proc_chromR.html">regex.win</a></td>
+<td>Process chromR object</td></tr>
+<tr><td style="width: 25%;"><a href="rePOS.html">rePOS</a></td>
+<td>Create non-overlapping positions (POS) for VCF data</td></tr>
+</table>
+
+<h2><a name="S">-- S --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="create_chromR.html">seq2chromR</a></td>
+<td>Create chromR object</td></tr>
+<tr><td style="width: 25%;"><a href="proc_chromR.html">seq2rects</a></td>
+<td>Process chromR object</td></tr>
+<tr><td style="width: 25%;"><a href="chromR-method.html">show-method</a></td>
+<td>chromR-method</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR-method.html">show-method</a></td>
+<td>show</td></tr>
+</table>
+
+<h2><a name="V">-- V --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="proc_chromR.html">var.win</a></td>
+<td>Process chromR object</td></tr>
+<tr><td style="width: 25%;"><a href="chromR_functions.html">variant.table</a></td>
+<td>chromR_functions</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_example.html">vcf</a></td>
+<td>Example data for vcfR.</td></tr>
+<tr><td style="width: 25%;"><a href="io_vcfR.html">VCF input and output</a></td>
+<td>Read and write vcf format files</td></tr>
+<tr><td style="width: 25%;"><a href="create_chromR.html">vcf2chromR</a></td>
+<td>Create chromR object</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR.html">vcfR</a></td>
+<td>Variant call format files processed with vcfR.</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR-class.html">vcfR-class</a></td>
+<td>vcfR class</td></tr>
+<tr><td style="width: 25%;"><a href="create_chromR.html">vcfR2chromR</a></td>
+<td>Create chromR object</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR2DNAbin.html">vcfR2DNAbin</a></td>
+<td>Convert vcfR to DNAbin</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_conversion.html">vcfR2genind</a></td>
+<td>Convert vcfR objects to other formats</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_conversion.html">vcfR2genlight</a></td>
+<td>Convert vcfR objects to other formats</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_conversion.html">vcfR2loci</a></td>
+<td>Convert vcfR objects to other formats</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR2migrate.html">vcfR2migrate</a></td>
+<td>Convert a vcfR object to MigrateN input file</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_to_tidy_conversion.html">vcfR2tidy</a></td>
+<td>Convert vcfR objects to tidy data frames</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_example.html">vcfR_example</a></td>
+<td>Example data for vcfR.</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_test.html">vcfR_test</a></td>
+<td>Test data for vcfR.</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_to_tidy_conversion.html">vcf_field_names</a></td>
+<td>Convert vcfR objects to tidy data frames</td></tr>
+<tr><td style="width: 25%;"><a href="vcfR_test.html">vcf_test</a></td>
+<td>Test data for vcfR.</td></tr>
+<tr><td style="width: 25%;"><a href="vep.html">vep</a></td>
+<td>Example data from the Variant Effect Predictor (VEP).</td></tr>
+</table>
+
+<h2><a name="W">-- W --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="chromR_functions.html">win.table</a></td>
+<td>chromR_functions</td></tr>
+<tr><td style="width: 25%;"><a href="windowing.html">Windowing</a></td>
+<td>Create window summaries of data</td></tr>
+<tr><td style="width: 25%;"><a href="windowing.html">windowize.NM</a></td>
+<td>Create window summaries of data</td></tr>
+<tr><td style="width: 25%;"><a href="fasta_output.html">write.fasta</a></td>
+<td>Create fasta format output</td></tr>
+<tr><td style="width: 25%;"><a href="summary_tables.html">write.var.info</a></td>
+<td>Write summary tables from chromR objects</td></tr>
+<tr><td style="width: 25%;"><a href="io_vcfR.html">write.vcf</a></td>
+<td>Read and write vcf format files</td></tr>
+<tr><td style="width: 25%;"><a href="summary_tables.html">write.win.info</a></td>
+<td>Write summary tables from chromR objects</td></tr>
+</table>
+
+<h2><a name="Z">-- Z --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="windowing.html">z.score</a></td>
+<td>Create window summaries of data</td></tr>
+</table>
+
+<h2><a name="misc">-- misc --</a></h2>
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="vcfR-method.html">[-method</a></td>
+<td>show</td></tr>
+</table>
+</body></html>
