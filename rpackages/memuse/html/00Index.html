@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>R: Memory Estimation Utilities</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+<h1> Memory Estimation Utilities
+<img class="toplogo" src="../../../doc/html/Rlogo.svg" alt="[R logo]" />
+</h1>
+<hr/>
+<div style="text-align: center;">
+<a href="../../../doc/html/packages.html"><img class="arrow" src="../../../doc/html/left.jpg" alt="[Up]" /></a>
+<a href="../../../doc/html/index.html"><img class="arrow" src="../../../doc/html/up.jpg" alt="[Top]" /></a>
+</div><h2>Documentation for package &lsquo;memuse&rsquo; version 4.1-0</h2>
+
+<ul><li><a href="../DESCRIPTION">DESCRIPTION file</a>.</li>
+<li><a href="../doc/index.html">User guides, package vignettes and other documentation.</a></li>
+</ul>
+
+<h2>Help Pages</h2>
+
+
+<table width="100%">
+<tr><td style="width: 25%;"><a href="memuse-package.html">memuse-package</a></td>
+<td>Core memuse Classes and Methods</td></tr>
+<tr><td style="width: 25%;"><a href="comparators.html">!=-method</a></td>
+<td>Comparators</td></tr>
+<tr><td style="width: 25%;"><a href="arithmetic.html">*-method</a></td>
+<td>Binary Arithmetic</td></tr>
+<tr><td style="width: 25%;"><a href="arithmetic.html">+-method</a></td>
+<td>Binary Arithmetic</td></tr>
+<tr><td style="width: 25%;"><a href="arithmetic.html">--method</a></td>
+<td>Binary Arithmetic</td></tr>
+<tr><td style="width: 25%;"><a href="arithmetic.html">/-method</a></td>
+<td>Binary Arithmetic</td></tr>
+<tr><td style="width: 25%;"><a href="comparators.html">&lt;-method</a></td>
+<td>Comparators</td></tr>
+<tr><td style="width: 25%;"><a href="comparators.html">&lt;=-method</a></td>
+<td>Comparators</td></tr>
+<tr><td style="width: 25%;"><a href="comparators.html">==-method</a></td>
+<td>Comparators</td></tr>
+<tr><td style="width: 25%;"><a href="comparators.html">&gt;-method</a></td>
+<td>Comparators</td></tr>
+<tr><td style="width: 25%;"><a href="comparators.html">&gt;=-method</a></td>
+<td>Comparators</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">Accessors</a></td>
+<td>Accessors</td></tr>
+<tr><td style="width: 25%;"><a href="arithmetic.html">Arithmetic</a></td>
+<td>Binary Arithmetic</td></tr>
+<tr><td style="width: 25%;"><a href="converters.html">as.character-method</a></td>
+<td>Converters</td></tr>
+<tr><td style="width: 25%;"><a href="converters.html">as.memuse</a></td>
+<td>Converters</td></tr>
+<tr><td style="width: 25%;"><a href="converters.html">as.memuse-method</a></td>
+<td>Converters</td></tr>
+<tr><td style="width: 25%;"><a href="converters.html">as.numeric-method</a></td>
+<td>Converters</td></tr>
+<tr><td style="width: 25%;"><a href="cachelinesize.html">cachelinesize</a></td>
+<td>Cache Sizes and Linesize</td></tr>
+<tr><td style="width: 25%;"><a href="cachesize.html">cachesize</a></td>
+<td>Cache Sizes</td></tr>
+<tr><td style="width: 25%;"><a href="comparators.html">Comparators</a></td>
+<td>Comparators</td></tr>
+<tr><td style="width: 25%;"><a href="constructor.html">Constructor</a></td>
+<td>memuse Constructor</td></tr>
+<tr><td style="width: 25%;"><a href="converters.html">Converters</a></td>
+<td>Converters</td></tr>
+<tr><td style="width: 25%;"><a href="filesize.html">filesize</a></td>
+<td>filesize</td></tr>
+<tr><td style="width: 25%;"><a href="howbig.html">howbig</a></td>
+<td>howbig</td></tr>
+<tr><td style="width: 25%;"><a href="howmany.html">howmany</a></td>
+<td>howmany</td></tr>
+<tr><td style="width: 25%;"><a href="hr.html">hr</a></td>
+<td>hr</td></tr>
+<tr><td style="width: 25%;"><a href="meminfo.html">meminfo</a></td>
+<td>meminfo</td></tr>
+<tr><td style="width: 25%;"><a href="constructor.html">memuse</a></td>
+<td>memuse Constructor</td></tr>
+<tr><td style="width: 25%;"><a href="memuse-class.html">memuse-class</a></td>
+<td>Class memuse</td></tr>
+<tr><td style="width: 25%;"><a href="constructor.html">memuse-method</a></td>
+<td>memuse Constructor</td></tr>
+<tr><td style="width: 25%;"><a href="constructor.html">mu</a></td>
+<td>memuse Constructor</td></tr>
+<tr><td style="width: 25%;"><a href="constructor.html">mu-method</a></td>
+<td>memuse Constructor</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">mu.names</a></td>
+<td>Accessors</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">mu.names-method</a></td>
+<td>Accessors</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">mu.prefix</a></td>
+<td>Accessors</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">mu.prefix-method</a></td>
+<td>Accessors</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">mu.size</a></td>
+<td>Accessors</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">mu.size-method</a></td>
+<td>Accessors</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">mu.unit</a></td>
+<td>Accessors</td></tr>
+<tr><td style="width: 25%;"><a href="accessors.html">mu.unit-method</a></td>
+<td>Accessors</td></tr>
+<tr><td style="width: 25%;"><a href="print-hr.html">print-hr</a></td>
+<td>Print 'humanreadable' objects</td></tr>
+<tr><td style="width: 25%;"><a href="print-memuse.html">print-memuse</a></td>
+<td>Printing</td></tr>
+<tr><td style="width: 25%;"><a href="print-memuse.html">print-method</a></td>
+<td>Printing</td></tr>
+<tr><td style="width: 25%;"><a href="print-sysinfo.html">print-sysinfo</a></td>
+<td>Print 'sysinfo' objects</td></tr>
+<tr><td style="width: 25%;"><a href="print-hr.html">print.humanreadable</a></td>
+<td>Print 'humanreadable' objects</td></tr>
+<tr><td style="width: 25%;"><a href="print-sysinfo.html">print.sysinfo</a></td>
+<td>Print 'sysinfo' objects</td></tr>
+<tr><td style="width: 25%;"><a href="procmem.html">procmem</a></td>
+<td>procmem</td></tr>
+<tr><td style="width: 25%;"><a href="print-memuse.html">show-method</a></td>
+<td>Printing</td></tr>
+<tr><td style="width: 25%;"><a href="sum-memuse-method.html">sum-method</a></td>
+<td>memuse Arithmetic</td></tr>
+<tr><td style="width: 25%;"><a href="swaps.html">swap.names</a></td>
+<td>Swaps</td></tr>
+<tr><td style="width: 25%;"><a href="swaps.html">swap.names-method</a></td>
+<td>Swaps</td></tr>
+<tr><td style="width: 25%;"><a href="swaps.html">swap.prefix</a></td>
+<td>Swaps</td></tr>
+<tr><td style="width: 25%;"><a href="swaps.html">swap.prefix-method</a></td>
+<td>Swaps</td></tr>
+<tr><td style="width: 25%;"><a href="swaps.html">swap.unit</a></td>
+<td>Swaps</td></tr>
+<tr><td style="width: 25%;"><a href="swaps.html">swap.unit-method</a></td>
+<td>Swaps</td></tr>
+<tr><td style="width: 25%;"><a href="swapinfo.html">swapinfo</a></td>
+<td>swapinfo</td></tr>
+<tr><td style="width: 25%;"><a href="swaps.html">Swaps</a></td>
+<td>Swaps</td></tr>
+<tr><td style="width: 25%;"><a href="cachelinesize.html">Sys.cachelinesize</a></td>
+<td>Cache Sizes and Linesize</td></tr>
+<tr><td style="width: 25%;"><a href="cachesize.html">Sys.cachesize</a></td>
+<td>Cache Sizes</td></tr>
+<tr><td style="width: 25%;"><a href="filesize.html">Sys.dirsize</a></td>
+<td>filesize</td></tr>
+<tr><td style="width: 25%;"><a href="filesize.html">Sys.filesize</a></td>
+<td>filesize</td></tr>
+<tr><td style="width: 25%;"><a href="meminfo.html">Sys.meminfo</a></td>
+<td>meminfo</td></tr>
+<tr><td style="width: 25%;"><a href="swapinfo.html">Sys.pageinfo</a></td>
+<td>swapinfo</td></tr>
+<tr><td style="width: 25%;"><a href="procmem.html">Sys.procmem</a></td>
+<td>procmem</td></tr>
+<tr><td style="width: 25%;"><a href="swapinfo.html">Sys.swapinfo</a></td>
+<td>swapinfo</td></tr>
+<tr><td style="width: 25%;"><a href="arithmetic.html">^-method</a></td>
+<td>Binary Arithmetic</td></tr>
+</table>
+</body></html>

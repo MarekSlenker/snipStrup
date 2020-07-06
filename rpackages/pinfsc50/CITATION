@@ -1,0 +1,16 @@
+bibentry("Article",
+   title = "vcf{R}: a package to manipulate and visualize {VCF} data in {R}",
+   author = c(person('Brian J. Knaus'), person('Niklaus J. Gr{\\"u}nwald')),
+   journal = 'Molecular Ecology Resources',
+   year   = "submitted",
+   note   = "{ISBN} N-NNNNNN-NN-N",
+   url    = "http://dx.doi.org/10.1101/041277",
+
+   mheader = "To cite the pinfsc50 dataset in publications use:",
+
+   mfooter = 
+     paste("We have invested a lot of time and effort in creating R,",
+      "please cite it when using it for data analysis.",
+      "See also", sQuote("citation(\"pkgname\")"),
+      "for citing R packages.", sep = " ")
+)

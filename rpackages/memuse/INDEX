@@ -1,0 +1,21 @@
+Accessors               Accessors
+Arithmetic              Binary Arithmetic
+Comparators             Comparators
+Constructor             memuse Constructor
+Converters              Converters
+Swaps                   Swaps
+cachelinesize           Cache Sizes and Linesize
+cachesize               Cache Sizes
+filesize                filesize
+howbig                  howbig
+howmany                 howmany
+hr                      hr
+meminfo                 meminfo
+memuse-class            Class memuse
+memuse-package          Core memuse Classes and Methods
+print-hr                Print 'humanreadable' objects
+print-memuse            Printing
+print-sysinfo           Print 'sysinfo' objects
+procmem                 procmem
+sum,memuse-method       memuse Arithmetic
+swapinfo                swapinfo
