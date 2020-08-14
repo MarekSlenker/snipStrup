@@ -32,15 +32,28 @@ rm(samples_ploidy_list)
 # Load REF sequences
 # REF seq -> table
 refSequences = read.dna(file = args[1], format="fasta")
-.rsl = length(refSequences)
 
-for (r in 1:length(refSequences)) {
-  cat(paste("processing sequence ",r,"of the",.rsl,"\n"))
-  refsq = as.data.frame(as.character(refSequences[r]))
-  assign(gsub("[[:space:]]", "", names(refSequences[r])), refsq)
-  rm(refsq)
+if (is.list(refSequences)){
+  .rsl = length(refSequences)
+
+  for (r in 1: .rsl) {
+    cat(paste("processing sequence ",r,"of the",.rsl,"\n"))
+    refsq = as.data.frame(as.character(refSequences[r]))
+    assign(gsub("[[:space:]]", "", names(refSequences[r])), refsq)
+    rm(refsq)
+  }
+  rm(.rsl)
+} else {
+  seqs = (attr(refSequences,"dimnames")[[1]])
+  .rsl = length(seqs)
+
+  for (r in 1: .rsl) {
+    cat(paste("processing sequence ",r,"of the",.rsl,"\n"))
+    refsq = as.character(refSequences[r,])
+    assign(gsub("[[:space:]]", "", seqs[r]), refsq[1,])
+    rm(refsq)
+  }
 }
-rm(.rsl)
 
 # Load vcf files
 chromsList=NULL
