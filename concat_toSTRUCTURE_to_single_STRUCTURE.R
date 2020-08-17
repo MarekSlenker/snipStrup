@@ -22,7 +22,7 @@ toStructureFiles = list.files(path = args[1], pattern = ".toSTRUCTURE", full.nam
 
 
 firstFile = read.delim(file = toStructureFiles[1], header = F, sep = " ")
-cat(paste("Processing file 1 out of", length(toStructureFiles),": ", toStructureFiles[file],"\n"))
+cat(paste("Processing file 1 out of", length(toStructureFiles),": ", toStructureFiles[1],"\n"))
   
 snpNames = as.character(lapply(firstFile[1,][- length(firstFile[1,])], as.character))
 snpValues = firstFile[-1,-1]
@@ -41,30 +41,32 @@ STRUCTUREFile = cbind(data.frame(XXsamples,  popsXploidy), snpValues)
   STRUCTUREFile = cbind(as.data.frame(XXsamples), snpValues)
 }
 
-samplesPrevious=XXsamples
+if (length(toStructureFiles)>1){
+   samplesPrevious=XXsamples
 
-for (file in 2:length(toStructureFiles)) {
+   for (file in 2:length(toStructureFiles)) {
   
-  cat(paste("Processing file",file, "out of", length(toStructureFiles),": ", toStructureFiles[file],"\n"))
+      cat(paste("Processing file",file, "out of", length(toStructureFiles),": ", toStructureFiles[file],"\n"))
   
-  nextFile = read.delim(file = toStructureFiles[file], header = F, sep = " ")
+      nextFile = read.delim(file = toStructureFiles[file], header = F, sep = " ")
 
-  snpNames = as.character(lapply(nextFile[1,][- length(nextFile[1,])], as.character))
-  snpValues = nextFile[-1,-1]
+      snpNames = as.character(lapply(nextFile[1,][- length(nextFile[1,])], as.character))
+      snpValues = nextFile[-1,-1]
 
-  samplesCurrent = as.character(lapply(nextFile[,1][-1], as.character))
+      samplesCurrent = as.character(lapply(nextFile[,1][-1], as.character))
 
-  if (!all(samplesPrevious==samplesCurrent)) {
-    stop(paste("samples of ",toStructureFiles[file]," are in different order than previous", sep = ""))
-  } else {
-    samplesPrevious = samplesCurrent
-  }
+      if (!all(samplesPrevious==samplesCurrent)) {
+        stop(paste("samples of ",toStructureFiles[file]," are in different order than previous", sep = ""))
+      } else {
+        samplesPrevious = samplesCurrent
+      }
 
-  colnames(snpValues) = snpNames
+      colnames(snpValues) = snpNames
 
-  STRUCTUREFile = cbind(STRUCTUREFile, snpValues)
+      STRUCTUREFile = cbind(STRUCTUREFile, snpValues)
+    }
 }
-  
+
 if (args[2] == "1") { # POPDATA = "1"
 	colnames(STRUCTUREFile)[1]=""
 	colnames(STRUCTUREFile)[2]=""
