@@ -95,7 +95,7 @@ for (fileN in 1:as.numeric(args[6])) {
 cat(paste("Writting files...\n"))
 for (fileN in 1:as.numeric(args[6])) {
   strFile = get(paste("structureFile",fileN,sep = ""))
-  
+  cat(paste("Writting",paste(args[5], "_", fileN, ".STRUCTURE", sep = ""),"\n"))
   write.table(x = strFile, file = paste(args[5], "_", fileN, ".STRUCTURE", sep = ""), sep = "\t", row.names = F, col.names = T, quote = F)
 
 }
