@@ -53,6 +53,7 @@ for (file in 1:length(toStructureFiles)) {
 
   snpNames = as.character(lapply(nextFile[1,][- length(nextFile[1,])], as.character))
   snpValues = nextFile[-1,-1]
+  snpValues = as.data.frame(snpValues)
 
   samplesCurrent = as.character(lapply(nextFile[,1][-1], as.character))
 
@@ -68,6 +69,7 @@ for (file in 1:length(toStructureFiles)) {
     snpsToTake = sample(1:length(snpValues), as.numeric(args[6])*as.numeric(args[7]), replace=TRUE)
   }
   
+  # co ak bude chciet zobrat viac snipov nez je v subore? - zoberu sa rovnake
   for (fileN in 1:as.numeric(args[6])) {
     strFile = get(paste("structureFile",fileN,sep = ""))
     snpPos = seq(fileN*as.numeric(args[7]), ((fileN-1)*as.numeric(args[7])+1),-1)
