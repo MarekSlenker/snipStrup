@@ -127,7 +127,7 @@ for (chrom in chromsList) {
   
   if (skipChromosome) {
     skipChromosome=FALSE
-    cat(paste("WARNING: Skipping chromosome", chrom,"\n\n"))
+    cat(paste("WARNING: samples with 0 alleles occured; Skipping chromosome", chrom,"\n\n"))
     next
   }
   
@@ -157,6 +157,11 @@ for (chrom in chromsList) {
   SNPs = drop(SNPs)
   SNPs=t(SNPs)
   # SNPs = SNPs[ order(row.names(SNPs)), ]   BUG
+  if (dim(SNPs)[2] == 0) {
+    cat(paste("WARNING: 0 SNPs were retained. Skipping chromosome", chrom,"\n\n"))
+    next
+  } 
+  
   
   #
   # Convert to structure
