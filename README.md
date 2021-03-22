@@ -167,4 +167,4 @@ Parameters in file STRUCTURE's *mainparams* file:
 
 
 ## Other questions not covered here and reporting problems
-If you have a question or you encounter a problem, please see [issues](https://github.com/MarekSlenker/snipStrup/issues) and feel free to ask any question. The authors will do their best to help you.
+If you have a question or you encounter a problem, feel free to email me at marek.slenker@savba.sk, or use [issues](https://github.com/MarekSlenker/snipStrup/issues). I will do my best to help you.
