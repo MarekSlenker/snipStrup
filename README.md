@@ -112,9 +112,11 @@ The `Main.sh` script will do the following:
 
 4. Run `concat_toSTRUCTURE_by_pattern_to_toSTRUCTURE.R` to concat exon's toSTRUCTURE files to gene's toSTRUCTURE fiels. Not required.
 
-5. Run `concat_toSTRUCTURE_to_multi_STRUCTUREs_by_PERCENTS.R` to produce defined numbers of STRUCTURE files, each containing random N% SNP site from each gene. This option ensures taking same portion of SNPs from diversely variable genes and on the other hand eliminates genes with low level of variation. (If you want to take 5%, genes with less than 11 variants will be discarded, because 10 is after rounding less than one).  
-Alternatively, to take same amount of SNPs from each toSTRUCTURE file, run `concat_toSTRUCTURE_to_multi_STRUCTUREs.R`, or `concat_toSTRUCTURE_to_single_STRUCTURE.R` to merge all toSTRUCTURE files to single STRUCTURE file.
-
+5. Run `concat_toSTRUCTURE_to_multi_STRUCTUREs.R` to take a single randon SNP (`STRUCTURE_SNPS_TO_OUTFILE = 1`) from each toSTRUCTURE file, to produce defined numbers of STRUCTURE files, each containing a single random SNP site from each gene. Only one or a few snips will be present in the portion of genes and respective toSTRUCTURE files. Taking a random SNP from the file where only one or two SNPs are present doesn't make sense, thus consider removing those toSTRUCTURE files where less than 10 SNPs are present.  
+      Alternatively, `concat_toSTRUCTURE_to_multi_STRUCTUREs_by_PERCENTS.R` produce defined numbers of STRUCTURE files, each containing random N% SNP site from each gene. This option ensures taking same portion of SNPs from diversely variable genes and on the other hand eliminates genes with low level of variation. (If you want to take 5%, genes with less than 11 variants will be discarded, because 10 is after rounding less than one).  
+      
+      
+      
 
 
 ### Equivocal variant filtration
