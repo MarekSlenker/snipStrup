@@ -24,7 +24,7 @@ STRUCTUREDIR="STRUCTURE_files" # output directory for STRUCTURE files
 # STRUCTURE parameters
 STRUCTURE_OUTFILES="100"              # number of random datasets to produce - STRUCTURE input files  
 STRUCTURE_OUTFILE_PREFIX="testData"
-STRUCTURE_SNPS_TO_OUTFILE="0.05"      # How many random SNPs do we take from one toStructure file? percent or integer, depends on script
+STRUCTURE_SNPS_TO_OUTFILE="1"      # How many random SNPs do we take from one toStructure file? percent or integer, depends on script
 STRUCTURE_POPDATA="1"              # 1/0  - input file contains a population identifier
 STRUCTURE_POPS="1,2,2,2,3"         # values for POPDATA
 
@@ -94,27 +94,8 @@ echo
 
 ## STEP FIVE: merge all toSTRUCTURE files to final STRUCTURE files
 
-# default approach: take a random n % of SNP sites (same portion) from each of the toSTRUCTURE files
 
-R CMD BATCH --no-save --no-restore "--args 
-	$CONCATENATED
-	$STRUCTURE_POPDATA
-	$STRUCTURE_POPS
-	$MAXPLOIDY
-	$STRUCTUREDIR/$STRUCTURE_OUTFILE_PREFIX
-	$STRUCTURE_OUTFILES
-	$STRUCTURE_SNPS_TO_OUTFILE" \
-	concat_toSTRUCTURE_to_multi_STRUCTUREs_by_PERCENTS.R concat_toSTRUCTURE_to_multi_STRUCTUREs_by_PERCENTS.R.log
-
-
-echo "STRUCTURE files were writed to $STRUCTUREDIR"
-
-
-exit
-
-
-
-# if you want to take a random n of SNP sites (same amount) from each of the toSTRUCTURE files
+# default approach: take a random n (STRUCTURE_SNPS_TO_OUTFILE) of SNP sites from each of the toSTRUCTURE files
 R CMD BATCH --no-save --no-restore "--args 
 	$toSTRUCTUREDIR
 	$STRUCTURE_POPDATA
@@ -125,8 +106,15 @@ R CMD BATCH --no-save --no-restore "--args
 	$STRUCTURE_SNPS_TO_OUTFILE" \
 	concat_toSTRUCTURE_to_multi_STRUCTUREs.R concat_toSTRUCTURE_to_multi_STRUCTUREs.R.log
 
-# if you want to merge all SNPs to a single output file, uncomment this alternative script
 
+
+echo "STRUCTURE files were writed to $STRUCTUREDIR"
+
+
+exit
+
+
+# if you want to merge all SNPs to a single output file, uncomment this alternative script
 R CMD BATCH --no-save --no-restore "--args 
 	$toSTRUCTUREDIR
 	$STRUCTURE_POPDATA
@@ -135,5 +123,14 @@ R CMD BATCH --no-save --no-restore "--args
 	$STRUCTUREDIR/$STRUCTURE_OUTFILE_PREFIX" \
 	concat_toSTRUCTURE_to_single_STRUCTURE.R concat_toSTRUCTURE_to_single_STRUCTURE.R.log
 
-
+# if you want to take a random n % of SNP sites (same portion) from each of the toSTRUCTURE files
+R CMD BATCH --no-save --no-restore "--args 
+	$CONCATENATED
+	$STRUCTURE_POPDATA
+	$STRUCTURE_POPS
+	$MAXPLOIDY
+	$STRUCTUREDIR/$STRUCTURE_OUTFILE_PREFIX
+	$STRUCTURE_OUTFILES
+	$STRUCTURE_SNPS_TO_OUTFILE" \
+	concat_toSTRUCTURE_to_multi_STRUCTUREs_by_PERCENTS.R concat_toSTRUCTURE_to_multi_STRUCTUREs_by_PERCENTS.R.log
 
