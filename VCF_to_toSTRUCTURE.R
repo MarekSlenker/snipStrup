@@ -108,7 +108,7 @@ for (chrom in chromsList) {
     # find & remember positions with: deletions, insertions and bases not passed filtering
     possitionsToRemove = c(possitionsToRemove, allelePoss[which(nchar(refAllels) > 1)]) # deletion in REF
     possitionsToRemove = c(possitionsToRemove, allelePoss[which(nchar(allels)>(pld*2-1))]) # insertion to ALT
-    possitionsToRemove = c(possitionsToRemove, allelePoss[which(! grepl("^[CTAGctag/]+$",allels))]) # weard character
+    possitionsToRemove = c(possitionsToRemove, allelePoss[which(! grepl("^[CTAGctag/|.]+$",allels))]) # weird character
     possitionsToRemove = c(possitionsToRemove, allelePoss[which(filter != "PASS")]) # filtering
     
     # remember SNPs positions
@@ -182,6 +182,10 @@ for (chrom in chromsList) {
     for (sample in 1:length(row.names(SNPs))) {
       
       snps = strsplit(x = SNPs[sample,position], fixed = T, split = "/")
+      if (length(snps[[1]]) == 1) {                                                    # 21.7.22
+        snps = strsplit(x = SNPs[sample,position], fixed = T, split = "|")  
+      }
+      
       samplePloidy = as.numeric(as.character(samples_ploidy))[sample]
       
       for (i in 1:STRUCTploidy) {
@@ -207,6 +211,7 @@ for (chrom in chromsList) {
   STRUCTUREtable[STRUCTUREtable=="T" | STRUCTUREtable=="t"] = 2
   STRUCTUREtable[STRUCTUREtable=="G" | STRUCTUREtable=="g"] = 3
   STRUCTUREtable[STRUCTUREtable=="C" | STRUCTUREtable=="c"] = 4
+  STRUCTUREtable[STRUCTUREtable=="." | STRUCTUREtable=="c"] = -9
   
   write.table(x = t(STRUCTUREtable),file = paste(args[5], "/", chrom, ".toSTRUCTURE", sep = "") , row.names = T, col.names = T)
   cat("\n")
