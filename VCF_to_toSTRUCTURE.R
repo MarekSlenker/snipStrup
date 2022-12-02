@@ -211,7 +211,7 @@ for (chrom in chromsList) {
   STRUCTUREtable[STRUCTUREtable=="T" | STRUCTUREtable=="t"] = 2
   STRUCTUREtable[STRUCTUREtable=="G" | STRUCTUREtable=="g"] = 3
   STRUCTUREtable[STRUCTUREtable=="C" | STRUCTUREtable=="c"] = 4
-  STRUCTUREtable[STRUCTUREtable=="." | STRUCTUREtable=="c"] = -9
+  STRUCTUREtable[STRUCTUREtable=="."] = -9
   
   write.table(x = t(STRUCTUREtable),file = paste(args[5], "/", chrom, ".toSTRUCTURE", sep = "") , row.names = T, col.names = T)
   cat("\n")
